@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>チン　チョウシ　CHEN CHANG CHIH — ポートフォリオ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ ナビゲーション ============ -->
+<nav id="nav">
+  <a href="#top" class="logo">C.C.C<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">プロフィール</a></li>
+    <li><a href="#works">制作実績</a></li>
+    <li><a href="#skills">スキル</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+  <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ ヒーロー ============ -->
+<section class="hero" id="top">
+  <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <h1>
+      デザイナー<br/>
+      <span class="hero-sub">失敗しても当たり前、成功したら男前。</span>
+    </h1>
+    <p>
+      １９９９年、台湾の台北市出身。東呉大学を卒業した後、２年ぐらいの非正規社員をしました。好きなことは、ピアノを弾くこと。歌を歌うこと。バスケをすること。
+    </p>
+    <div class="hero-meta">
+      <span>現在<strong>就職活動中</strong></span>
+      <span>専門分野<strong>Webデザイン・UI</strong></span>
+      <span>活動開始<strong>2026年〜</strong></span>
+    </div>
+  </div>
+</section>
+
+<!-- マーキー -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>HTML / CSS</span>
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>Figma</span>
+    <span>UIデザイン</span>
+    <span>インタラクション</span>
+    <span>HTML / CSS</span>
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>Figma</span>
+    <span>UIデザイン</span>
+    <span>インタラクション</span>
+    <span>HTML / CSS</span>
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>Figma</span>
+    <span>UIデザイン</span>
+    <span>インタラクション</span>
+  </div>
+</div>
+
+<!-- ============ プロフィール ============ -->
+<section id="about">
+  <span class="bg-deco bg-deco--year">1999</span>
+  <span class="section-label reveal">プロフィール</span>
+  <h2 class="reveal">美しさと使いやすさ、<br/>その両方を追求する。</h2>
+
+  <div class="about-grid">
+    <div class="avatar reveal">
+  <img src="img/ccc.JPG" alt="チン チョウシのプロフィール写真" /></div>
+    <div class="about-text reveal">
+      <p>
+        はじめまして、<strong>チン　チョウシ</strong>と申します。デザイナーの視点を持つフロントエンド開発者として、見た目の美しさと使い心地を両立したインターフェースを作っています。タイポグラフィ、モーション、そして細部のディテールにこだわっています。
+      </p>
+      <p>
+        デザインとコードの橋渡しをするのが好きです。プロジェクトはまず課題の理解から始まり、そこからピクセル単位で正確かつパフォーマンスに優れたインターフェースへと落とし込んでいきます。アクセシビリティ、パフォーマンス、そしてウェブをより親しみやすい場所にすることを大切にしています。
+      </p>
+      <p>
+        仕事以外の時間は、バスケットボールをしたり、展覧会を見に行ったりしています。学び続け、作り続けていきます。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 制作実績 ============ -->
+<section id="works">
+  <span class="bg-deco bg-deco--works">WORKS</span>
+  <span class="section-label reveal">制作実績</span>
+  <h2 class="reveal">最近のプロジェクト<br/>をいくつか。</h2>
+
+  <div class="featured-grid">
+    <article class="featured reveal">
+      <div class="featured-img">
+        <a href="https://25aw0124-glitch.github.io/-/" target="_blank" rel="noopener">
+        <img src="img/MCクラフト.png" alt="MCクラフトの写真" />
+      </a>
+      </div>
+      <div class="featured-body">
+        <h3>MCクラフト</h3>
+        <p>ランディングページ・2025</p>
+      </div>
+    </article>
+    <article class="featured reveal">
+      <div class="featured-img">
+        <a href="https://25aw0124-glitch.github.io/zennki_tyousi/" target="_blank" rel="noopener">
+          <img src="img/前期課題.png" alt="前期課題の写真" />
+        </a>
+      </div>
+      <div class="featured-body">
+        <h3>日本電子専門学校Webデザイン科</h3>
+        <p>スペシャルサイト・2025</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="works-list reveal">
+    <div class="work">
+      <div class="work-num">01</div>
+      <div class="work-title">アンダの森ユーザー導線改善提案</div>
+      <div class="work-meta">
+        <span class="tag">UX</span><span class="tag">Figma</span><span class="tag">2026</span>
+      </div>
+      <div class="work-arrow">
+      <a class="work-arrow" href="https://www.figma.com/design/PPF4Fh4V7GAe2BKaxY4aGp/%E3%82%A2%E3%83%B3%E3%83%80%E3%81%AE%E6%A3%AE%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%B0%8E%E7%B7%9A%E6%94%B9%E5%96%84%E6%8F%90%E6%A1%88?node-id=0-1&p=f&t=chgJBsKmWgiUEzG7-0" target="_blank" rel="noopener" aria-label="作品を見る">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+      </div>
+    </div>
+    <div class="work">
+      <div class="work-num">02</div>
+      <div class="work-title">Osmo Pocket3の提案</div>
+      <div class="work-meta">
+        <span class="tag">デザイン</span><span class="tag">コーディング</span><span class="tag">Figma</span><span class="tag">2026</span>
+      </div>
+      <a class="work-arrow" href="https://25aw0124-glitch.github.io/osmopocket3_/" target="_blank" rel="noopener" aria-label="作品を見る">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+    </div>
+    <div class="work">
+      <div class="work-num">03</div>
+      <div class="work-title">情報デザイン_お守りんの提案</div>
+      <div class="work-meta">
+        <span class="tag">UX</span><span class="tag">Figma</span><span class="tag">2025</span>
+      </div>
+      <a class="work-arrow" href="https://www.figma.com/design/ioldMriGVWW94kreCeVEIB/%E6%83%85%E5%A0%B1%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3?node-id=0-1&t=KprzVbN9Q8AOYTRj-1" target="_blank" rel="noopener" aria-label="作品を見る">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+    </div>
+    <div class="work">
+      <div class="work-num">04</div>
+      <div class="work-title">個人名刺制作</div>
+      <div class="work-meta">
+        <span class="tag">デザイン</span><span class="tag">Photoshop</span><span class="tag">2025</span>
+      </div>
+      <a class="work-arrow" href="pdf/名刺.pdf" target="_blank" rel="noopener" aria-label="名刺PDFを見る">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ スキル ============ -->
+<section id="skills">
+  <span class="section-label reveal">スキル</span>
+  <h2 class="reveal">使用しているツール。</h2>
+
+  <div class="skills-grid reveal">
+    <div class="skill-group">
+      <h4>デザイン</h4>
+      <ul>
+        <li>Figma</li>
+        <li>Adobe Photoshop</li>
+        <li>Adobe Illustrator</li>
+        <li>UI / UXデザイン</li>
+        <li>プロトタイピング</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>フロントエンド</h4>
+      <ul>
+        <li>HTML5 &amp; CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React / Next.js</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>ツール</h4>
+      <ul>
+        <li>Git &amp; GitHub</li>
+        <li>VS Code</li>
+        <li>Vite / Webpack</li>
+        <li>Vercel / Netlify</li>
+        <li>Notion / Slack</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ お問い合わせ ============ -->
+<section id="contact">
+  <span class="section-label reveal">お問い合わせ</span>
+  <p class="contact-headline reveal">
+    一緒に何か <a href="mailto:hello@yourdomain.com">作りませんか</a>。
+  </p>
+
+  <div class="contact-grid reveal">
+    <div class="contact-item">
+      <h5>メール</h5>
+      <a href="mailto:hello@yourdomain.com">25aw0124@jec.ac.jp</a>
+    </div>
+    <div class="contact-item">
+      <h5>GitHub</h5>
+      <a href="#" target="_blank" rel="noopener">25aw0124-glitch</a>
+    </div>
+    <div class="contact-item">
+      <h5>携帯電話</h5>
+      <a href="#" target="_blank" rel="noopener">090-8681-1104</a>
+    </div>
+    <div class="contact-item">
+      <h5>所在地</h5>
+      <p>東京、日本</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ フッター ============ -->
+<footer>
+  <span>© <span id="year"></span> チン　チョウシ. All rights reserved.</span>
+  <span>心を込めてデザイン・制作。</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
