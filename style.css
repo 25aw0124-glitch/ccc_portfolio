@@ -456,6 +456,7 @@ h3 { font-size: 22px; }
   margin-bottom: 80px;
 }
 .featured {
+  position: relative;
   background: var(--bg-alt);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -479,7 +480,7 @@ h3 { font-size: 22px; }
   overflow: hidden;
 }
 .featured:nth-child(2) .featured-img { background: linear-gradient(135deg, #e8e4dc, #c9c2b3); }
-.featured-body { padding: 28px 32px; }
+.featured-body { padding: 28px 32px 56px; }
 .featured-body h3 { margin-bottom: 8px; font-weight: 500; }
 .featured-body p { font-size: 14px; color: var(--fg-muted); }
 .featured-desc {
@@ -490,21 +491,44 @@ h3 { font-size: 22px; }
   line-height: 1.6;
   transition: max-height 0.4s var(--easing), opacity 0.35s var(--easing), margin-top 0.4s var(--easing);
 }
-.featured:hover .featured-desc,
-.featured:focus-within .featured-desc {
+.featured-desc.is-open {
   max-height: 800px;
   margin-top: 10px !important;
   opacity: 1;
 }
 
-/* モバイル: ホバーの代わりにスクロールで表示領域に入ったら自動で紹介文を開く */
+/* モバイル: 開いた紹介文が画面より長くなり画像が見えなくなるのを防ぐため、内側スクロールに切り替える */
 @media (max-width: 860px) {
-  .featured.in-view .featured-desc {
-    max-height: 800px;
-    margin-top: 10px !important;
-    opacity: 1;
+  .featured-desc.is-open {
+    max-height: 200px;
+    overflow-y: auto;
   }
 }
+
+/* 紹介文の開閉トグルボタン(カード右下に固定) */
+.featured-toggle {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: var(--fg);
+  color: var(--bg);
+  cursor: pointer;
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.35s var(--easing), background 0.2s var(--easing);
+}
+.featured-toggle:hover {
+  background: #000000;
+}
+.featured-toggle svg { width: 15px; height: 15px; }
+.featured-toggle.is-open { transform: rotate(180deg); }
 
 /* ---------- スキル ---------- */
 .skills-grid {
@@ -628,6 +652,7 @@ h3 { font-size: 22px; }
   transition: opacity 0.2s var(--easing);
 }
 .contact-headline a:hover { opacity: 0.6; }
+.mobile-break { display: none; }
 
 .contact-grid {
   display: grid;
@@ -674,6 +699,8 @@ footer {
 
 /* ---------- レスポンシブ ---------- */
 @media (max-width: 860px) {
+  .mobile-break { display: initial; }
+
   nav {
     padding: 14px 20px;
     min-height: 52px;

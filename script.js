@@ -35,17 +35,30 @@ const io = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-// ---------- モバイル: 作品カードがスクロールで表示領域に入ったら紹介文を自動表示 ----------
-const featuredIo = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      entry.target.classList.toggle("in-view", entry.isIntersecting);
-    });
-  },
-  { threshold: 0.5 }
-);
+// ---------- 作品カード: 矢印ボタンで紹介文を開閉 ----------
+// PC: 全カード連動 / モバイル(860px以下): カードごとに個別開閉
+const featuredToggles = Array.from(document.querySelectorAll(".featured-toggle"));
+const mobileQuery = window.matchMedia("(max-width: 860px)");
+let featuredOpen = false;
 
-document.querySelectorAll(".featured").forEach((el) => featuredIo.observe(el));
+function setToggleState(btn, open) {
+  const desc = btn.nextElementSibling;
+  btn.classList.toggle("is-open", open);
+  desc.classList.toggle("is-open", open);
+  btn.setAttribute("aria-expanded", String(open));
+  btn.setAttribute("aria-label", open ? "詳細を閉じる" : "詳細を表示");
+}
+
+featuredToggles.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (mobileQuery.matches) {
+      setToggleState(btn, !btn.classList.contains("is-open"));
+    } else {
+      featuredOpen = !featuredOpen;
+      featuredToggles.forEach((b) => setToggleState(b, featuredOpen));
+    }
+  });
+});
 
 // ---------- ヒーロー: ブロブの浮遊 + マウスで反発 ----------
 (function initHeroBlobs() {
