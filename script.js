@@ -35,6 +35,18 @@ const io = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
+// ---------- モバイル: 作品カードがスクロールで表示領域に入ったら紹介文を自動表示 ----------
+const featuredIo = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("in-view", entry.isIntersecting);
+    });
+  },
+  { threshold: 0.5 }
+);
+
+document.querySelectorAll(".featured").forEach((el) => featuredIo.observe(el));
+
 // ---------- ヒーロー: ブロブの浮遊 + マウスで反発 ----------
 (function initHeroBlobs() {
   const field = document.querySelector(".hero-blobs");

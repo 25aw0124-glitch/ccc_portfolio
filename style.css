@@ -497,6 +497,15 @@ h3 { font-size: 22px; }
   opacity: 1;
 }
 
+/* モバイル: ホバーの代わりにスクロールで表示領域に入ったら自動で紹介文を開く */
+@media (max-width: 860px) {
+  .featured.in-view .featured-desc {
+    max-height: 800px;
+    margin-top: 10px !important;
+    opacity: 1;
+  }
+}
+
 /* ---------- スキル ---------- */
 .skills-grid {
   display: grid;
