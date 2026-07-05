@@ -545,7 +545,7 @@ h3 { font-size: 22px; }
   }
 }
 
-/* 紹介文の開閉トグルボタン(カード右下に固定) */
+/* 紹介文の開閉トグルボタン(カード右下に固定・文字+矢印のピル型) */
 .featured-toggle {
   position: absolute;
   right: 16px;
@@ -553,22 +553,29 @@ h3 { font-size: 22px; }
   z-index: 3;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
+  gap: 6px;
+  padding: 8px 14px;
   border: none;
-  border-radius: 50%;
+  border-radius: 999px;
   background: var(--fg);
   color: var(--bg);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
   cursor: pointer;
   box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.4);
-  transition: transform 0.35s var(--easing), background 0.2s var(--easing);
+  transition: background 0.2s var(--easing);
 }
 .featured-toggle:hover {
   background: #000000;
 }
-.featured-toggle svg { width: 15px; height: 15px; }
-.featured-toggle.is-open { transform: rotate(180deg); }
+.featured-toggle-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: transform 0.35s var(--easing);
+}
+.featured-toggle.is-open .featured-toggle-icon { transform: rotate(180deg); }
 
 /* ---------- スキル ---------- */
 .skills-grid {

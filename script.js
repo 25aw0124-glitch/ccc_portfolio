@@ -43,10 +43,12 @@ let featuredOpen = false;
 
 function setToggleState(btn, open) {
   const desc = btn.nextElementSibling;
+  const label = btn.querySelector(".featured-toggle-label");
   btn.classList.toggle("is-open", open);
   desc.classList.toggle("is-open", open);
   btn.setAttribute("aria-expanded", String(open));
   btn.setAttribute("aria-label", open ? "詳細を閉じる" : "詳細を表示");
+  if (label) label.textContent = open ? "閉じる" : "詳しく見る";
 }
 
 featuredToggles.forEach((btn) => {
