@@ -345,46 +345,37 @@ h3 { font-size: 22px; }
   z-index: 2;
 }
 
-.avatar-photo-1 { animation: avatarFade1 20s ease-in-out infinite; }
-.avatar-photo-2 { animation: avatarFade2 20s ease-in-out infinite; }
-.avatar-photo-3 { animation: avatarFade3 20s ease-in-out infinite; object-position: top; }
-.avatar-photo-4 { animation: avatarFade4 20s ease-in-out infinite; object-position: top; }
+.avatar-photo-1 { animation: avatarFade1 18s ease-in-out infinite; }
+.avatar-photo-3 { animation: avatarFade3 18s ease-in-out infinite; object-position: top; }
+.avatar-photo-4 { animation: avatarFade4 18s ease-in-out infinite; object-position: top; }
 
-/* ccc1 → ccc2 → ccc3 → ccc4 → (ccc1に戻る)を無限ループでクロスフェード */
+/* ccc1 → ccc2 → ccc3 → (ccc1に戻る)を無限ループでクロスフェード */
 @keyframes avatarFade1 {
   0%   { opacity: 1; }
-  22%  { opacity: 1; }
-  25%  { opacity: 0; }
+  30%  { opacity: 1; }
+  33%  { opacity: 0; }
   97%  { opacity: 0; }
   100% { opacity: 1; }
 }
-@keyframes avatarFade2 {
-  0%   { opacity: 0; }
-  22%  { opacity: 0; }
-  25%  { opacity: 1; }
-  47%  { opacity: 1; }
-  50%  { opacity: 0; }
-  100% { opacity: 0; }
-}
 @keyframes avatarFade3 {
   0%   { opacity: 0; }
-  47%  { opacity: 0; }
-  50%  { opacity: 1; }
-  72%  { opacity: 1; }
-  75%  { opacity: 0; }
+  30%  { opacity: 0; }
+  33%  { opacity: 1; }
+  63%  { opacity: 1; }
+  66%  { opacity: 0; }
   100% { opacity: 0; }
 }
 @keyframes avatarFade4 {
   0%   { opacity: 0; }
-  72%  { opacity: 0; }
-  75%  { opacity: 1; }
+  63%  { opacity: 0; }
+  66%  { opacity: 1; }
   97%  { opacity: 1; }
   100% { opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .avatar-photo-1, .avatar-photo-2, .avatar-photo-3, .avatar-photo-4 { animation: none; }
-  .avatar-photo-2, .avatar-photo-3, .avatar-photo-4 { opacity: 0; }
+  .avatar-photo-1, .avatar-photo-3, .avatar-photo-4 { animation: none; }
+  .avatar-photo-3, .avatar-photo-4 { opacity: 0; }
 }
 
 .about-text p {
