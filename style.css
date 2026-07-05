@@ -555,10 +555,12 @@ h3 { font-size: 22px; }
   white-space: nowrap;
   cursor: pointer;
   box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.4);
-  transition: background 0.2s var(--easing);
+  transition: background 0.2s var(--easing), transform 0.25s var(--easing), box-shadow 0.25s var(--easing);
 }
 .featured-toggle:hover {
   background: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.5);
 }
 .featured-toggle-icon {
   width: 14px;
